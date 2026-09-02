@@ -1,8 +1,9 @@
 import pytest
 from calc import add
 
+
 def test_add_positive_numbers():
-    assert add(2,3) == 5
+    assert add(2, 3) == 5
 
 
 def test_add_negative_numbers():
@@ -36,4 +37,4 @@ def test_add_type_error_none():
 
 def test_add_type_error_list():
     with pytest.raises(TypeError):
-        add([1 ,2 ,3], 6)
+        add([1, 2, 3], 6)
