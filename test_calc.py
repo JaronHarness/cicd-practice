@@ -6,10 +6,13 @@ def test_add_positive_numbers():
     assert add(2, 3) == 5
 
 
-def test_add_negative_numbers():
-    assert add(-1, -4) == -5
-    assert add(5, -3) == 2
-    assert add(-7, 4) == -3
+@pytest.mark.parametrize("a, b, expected", [
+    (-1, -4, 5),
+    (5, -3, 2),
+    (-7, 4, -3),
+])
+def test_add_negative_numbers(a, b, expected):
+    assert add(a, b) == expected
 
 
 def test_add_zero():
