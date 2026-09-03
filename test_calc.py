@@ -7,7 +7,7 @@ def test_add_positive_numbers():
 
 
 @pytest.mark.parametrize("a, b, expected", [
-    (-1, -4, 5),
+    (-1, -4, -5),
     (5, -3, 2),
     (-7, 4, -3),
 ])
